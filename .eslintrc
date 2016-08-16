@@ -1,0 +1,9 @@
+{
+  "extends": "airbnb-base",
+  "plugins": ["async-await"],
+  "rules": {
+    "import/no-unresolved": 0,
+    // allow debugger during development
+    "no-debugger": 0
+  }
+}
