@@ -6,6 +6,7 @@ const routeMap = bulk(__dirname, ['./!(*index).js']); // 路由配置文件的�
 const router = new Router();
 const allowMethods = ['get', 'post', 'del', 'put']; // router 可用的方法
 
+// 自动加载该目录下的路由文件
 Object.keys(routeMap).forEach((item) => {
   const maps = routeMap[item].default;
   if (!maps) return;

@@ -1,3 +1,6 @@
+import userService from '../service/user';
+
 export async function getName(ctx, next) {
-  ctx.body = 'hello world';
+  userService.createUser();
+  ctx.body = 'hello xiaoming';
 }

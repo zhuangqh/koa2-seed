@@ -1,5 +1,3 @@
-'use strict';
-
 import Koa from 'koa';
 import config from './config';
 import router from './routers';
