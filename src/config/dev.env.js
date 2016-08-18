@@ -16,14 +16,14 @@ export default {
       },
       {
         type: 'dateFile',
-        filename: 'logs/error.log',
+        filename: 'logs/error',
         pattern: '-MM-dd.log',
         alwaysIncludePattern: true,
         category: 'error',
       },
       {
         type: 'dateFile',
-        filename: 'logs/debug.log',
+        filename: 'logs/debug',
         pattern: '-MM-dd.log',
         alwaysIncludePattern: true,
         category: 'debug',
