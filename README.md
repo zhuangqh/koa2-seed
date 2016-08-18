@@ -57,28 +57,30 @@ export default userSchema;
 ├── .babelrc
 ├── .eslintrc
 ├── .gitignore
-├── dist                    # 编译后的代码
-│   └── *
 ├── logs                    # 日志文件
 │   ├── debug-xx-xx.log
 │   └── error-xx-xx.log
 ├── package.json
-└── src
-    ├── config              # 配置目录
-    │   ├── dev.env.js
-    │   ├── index.js
-    │   └── prod.env.js
-    ├── controllers         # 控制器，处理请求
-    │   └── user.js
-    ├── index.js            # 入口
-    ├── models              # 数据库模型
-    │   ├── index.js        # 载入模型，导出所有模型
-    │   └── user.js
-    ├── routers             # 路由目录
-    │   ├── index.js        # 载入路由
-    │   └── user.js         # 路由表
-    ├── service             # 数据库服务
-    │   └── user.js
-    └── utils               # 存放一些辅助模块
-        └── logger.js
+├── server                  # 编译后的代码
+│   └── *
+├── src
+│   ├── config              # 配置目录
+│   │   ├── dev.env.js
+│   │   ├── index.js
+│   │   └── prod.env.js
+│   ├── controllers         # 控制器，处理请求
+│   │   └── user.js
+│   ├── index.js            # 入口
+│   ├── models              # 数据库模型
+│   │   ├── index.js        # 载入模型，导出所有模型
+│   │   └── user.js
+│   ├── routers             # 路由目录
+│   │   ├── index.js        # 载入路由
+│   │   └── user.js         # 路由表
+│   ├── service             # 数据库服务
+│   │   └── user.js
+│   └── utils               # 存放一些辅助模块
+│       └── logger.js
+└── test                    # mocha 测试
+    └── test.js
 ```
