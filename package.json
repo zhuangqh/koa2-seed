@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon src/index.js --exec babel-node",
     "build": "babel src -d dist",
-    "serve": "npm run build && node dist/index.js"
+    "serve": "NODE_ENV=production node dist/index.js"
   },
   "keywords": [
     "koa2",

@@ -9,4 +9,28 @@ export default {
     password: '',
     database: 'example',
   },
+  log: {
+    appenders: [
+      {
+        type: 'console',
+      },
+      {
+        type: 'dateFile',
+        filename: 'logs/error.log',
+        pattern: '-MM-dd.log',
+        alwaysIncludePattern: true,
+        category: 'error',
+      },
+      {
+        type: 'dateFile',
+        filename: 'logs/debug.log',
+        pattern: '-MM-dd.log',
+        alwaysIncludePattern: true,
+        category: 'debug',
+      },
+    ],
+    levels: {
+      error: 'ALL',
+    },
+  },
 };
