@@ -1,55 +1,33 @@
-# koa2 种子项目
+# koa2 boilerplate
 
-## 功能
+## Feature
 
-- 允许使用 ES6/7 的特性，如 async/await
-- 代码更新后热重启
-- 日志
+- enable ES6/7 's feature, such as async/await
+- hot reloading using nodemon
+- logging
 
-## 使用说明
+## Notes
 
 ```bash
-$ npm install # 安装依赖
-$ npm run dev # 开发模式，使用 dev.env.js 的配置
-$ npm run build # babel 编译 src 文件夹下的代码
-$ npm run serve # 运行编译后的代码，使用 prod.env.js 的配置
-```
-
-### router
-
-将路由表写在 router 目录下, 配置会被自动加载
-
-```javascript
-/**
- *  [方法名]: { url : controller }
- *  同一个方法下可以写多个路由
- * */
-export default {
-  get: {
-    '/api/user': Ctrl.getName,
-  },
-};
+$ npm install # install dependence
+$ npm run dev # development mode, using dev.env.js as configuration
+$ npm run build # compile the code under the `src` directory using babel
+$ npm run serve # run the compiled code, using prod.env.js as configuration
 ```
 
 ### model
 
-将数据库模块写在 model 目录下，模块会被自动加载
+configure the database model under the `models` directory
 
-模块名为文件名，代码导出一个 schema
+models would be automatically loaded
 
 ```javascript
-import mongoose from 'mongoose';
-
-const Schema = mongoose.Schema;
-
-const userSchema = new Schema({
+export default {
   name: String,
-});
-
-export default userSchema;
+};
 ```
 
-## 目录结构说明
+## Directory structure
 
 ```
 .
@@ -57,30 +35,27 @@ export default userSchema;
 ├── .babelrc
 ├── .eslintrc
 ├── .gitignore
-├── logs                    # 日志文件
+├── logs                    # log files
 │   ├── debug-xx-xx.log
 │   └── error-xx-xx.log
 ├── package.json
-├── server                  # 编译后的代码
+├── server                  # compiled code
 │   └── *
 ├── src
-│   ├── config              # 配置目录
+│   ├── config              # configuration
 │   │   ├── dev.env.js
 │   │   ├── index.js
 │   │   └── prod.env.js
-│   ├── controllers         # 控制器，处理请求
+│   ├── controllers         # request handler
 │   │   └── user.js
-│   ├── index.js            # 入口
-│   ├── models              # 数据库模型
-│   │   ├── index.js        # 载入模型，导出所有模型
+│   ├── index.js            # entrance
+│   ├── models              # database models
+│   │   ├── index.js        # load models
 │   │   └── user.js
-│   ├── routers             # 路由目录
-│   │   ├── index.js        # 载入路由
-│   │   └── user.js         # 路由表
-│   ├── service             # 数据库服务
+│   ├── service             # database service
 │   │   └── user.js
-│   └── utils               # 存放一些辅助模块
+│   └── utils               # utility
 │       └── logger.js
-└── test                    # mocha 测试
+└── test                    # mocha test
     └── test.js
 ```
