@@ -1,10 +1,10 @@
-import userService from '../service/user';
+const userService = require('../service/user');
 
-export async function getName(ctx) {
+async function getName(ctx) {
   userService.createUser();
   ctx.body = 'hello xiaoming';
 }
 
-export default function userCtrl(router) {
+module.exports = (router) => {
   router.get('/api/user', getName);
 };

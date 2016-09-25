@@ -1,12 +1,12 @@
-import Router from 'koa-router';
-import compose from 'koa-compose';
-import userCtrl from './user';
+const Router = require('koa-router');
+const compose = require('koa-compose');
+const userCtrl = require('./user');
 
 const router = new Router();
 
 userCtrl(router);
 
-export default () => compose([
+module.exports = () => compose([
   router.routes(),
   router.allowedMethods(),
 ]);

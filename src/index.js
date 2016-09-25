@@ -1,7 +1,7 @@
-import Koa from 'koa';
-import config from './config';
-import controller from './controllers';
-import log4js from './utils/logger';
+const Koa = require('koa');
+const config = require('./config');
+const controller = require('./controllers');
+const log4js = require('./utils/logger');
 
 const logger = log4js.getLogger('server');
 const app = new Koa();
@@ -31,4 +31,4 @@ async function init() {
 
 init();
 
-export default app;
+module.exports = app;

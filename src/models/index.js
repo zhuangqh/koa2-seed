@@ -1,6 +1,6 @@
-import mongoose from 'mongoose';
-import bulk from 'bulk-require';
-import config from '../config';
+const mongoose = require('mongoose');
+const bulk = require('bulk-require');
+const config = require('../config');
 
 mongoose.connect(`mongodb://${config.db.host}/${config.db.database}`);
 
@@ -12,4 +12,4 @@ Object.keys(models).forEach((item) => {
   db[item] = mongoose.model(item, new mongoose.Schema(models[item].default));
 });
 
-export default db;
+module.exports = db;

@@ -1,6 +1,6 @@
-import log4js from 'log4js';
-import config from '../config';
+const log4js = require('log4js');
+const config = require('../config');
 
 log4js.configure(config.log);
 
-export default log4js;
+module.exports = log4js;

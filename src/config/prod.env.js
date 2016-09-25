@@ -1,6 +1,6 @@
-import path from 'path';
+const path = require('path');
 
-export default {
+module.exports = {
   port: 8000,
   static: path.resolve(__dirname, 'public'),
   db: {

@@ -1,6 +1,6 @@
-import dev from './dev.env';
-import prod from './prod.env';
+const dev = require('./dev.env');
+const prod = require('./prod.env');
 
 const config = process.env.NODE_ENV === 'production' ? prod : dev;
 
-export default config;
+module.exports = config;

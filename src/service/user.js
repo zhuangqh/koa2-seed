@@ -1,4 +1,4 @@
-import db from '../models';
+const db = require('../models');
 
 async function createUser() {
   db.user.create({
@@ -6,6 +6,6 @@ async function createUser() {
   });
 }
 
-export default {
+module.exports = {
   createUser,
 };
