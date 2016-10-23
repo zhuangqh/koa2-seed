@@ -8,6 +8,7 @@ module.exports = {
     username: 'root',
     password: '',
     database: 'example',
+    port: 27017,
   },
   log: {
     appenders: [
